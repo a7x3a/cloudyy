@@ -1,0 +1,24 @@
+ <div
+          onKeyDown={handleKeyDown}
+          onInput={() => {
+            setInputOut(true);
+          }}
+          onBeforeInput={() => {
+            setInputOut(false);
+          }}
+          className="seacrh_bar  left-0  sm:focus-within:translate-x-0 sm:hover:translate-x-0 group sm:relative sm:top-0 absolute h-[300dvh]   focus-within:min-w-full    sm:translate-y-0 flex  items-center sm:gap-3 gap-2 sm:min-w-[24em] min-w-full   sm:h-[55px] h-[48px] active:h-full z-50    transition-all duration-1000  text-gray-600 caret-black bg-white px-4 rounded-e-full rounded-s-full"
+        >
+          <FaSearch
+            onClick={isInputOut ? performSearch : null}
+            className="cursor-pointer transition-all duration-300 hover:scale-105 scale-100 active:scale-75 "
+          />
+          <input
+            placeholder="Search for a place..."
+            autoComplete="off"
+            type="text"
+            name="location_text"
+            id="location_target"
+            className="sm:w-full w-3/4 capitalize placeholder:lowercase  min-h-[100dvh] bg-transparent  outline-none border-none sm:text-gray-700 font-light font-mono  absolute left-10 transition-all duration-1000  group-hover:text-gray-700 group-hover:bg-transparent 
+             sm:group-hover:w-full  group-focus:w- group-:w-0 "
+          />
+        </div>
