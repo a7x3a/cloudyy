@@ -35,7 +35,7 @@ useEffect(() => {
  
 
 
-const API_KEY = "a8fdff6a0bd7e8be42152728c29d7136";
+const API_KEY = process.env.API_KEY;
 const API_URL = "https://api.openweathermap.org";
   const performSearch = async () => {
     setLoader(true);
